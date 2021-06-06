@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <libgen.h>
 
-#include "tp2.h"
+#include "filtros.h"
 #include "helper/tiempo.h"
 #include "helper/libbmp.h"
 #include "helper/utils.h"

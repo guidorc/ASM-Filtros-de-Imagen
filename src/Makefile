@@ -1,18 +1,14 @@
-# ************************************************************************* #
-#   Organizacion del Computador II - Trabajo Practico 2                     #
-# ************************************************************************* #
-
 CFLAGS64 = -ggdb -Wall -Wno-unused-parameter -Wextra -std=c99 -no-pie -pedantic -m64 -O0 -march=native
 CFLAGS=$(CFLAGS64)
 
 BUILD_DIR = build
-BIN = tp2
+BIN = filtros
 
 FILTROS = ColorBordes ImagenFantasma PixeladoDiferencial ReforzarBrillo
 
 FILTROS_OBJ = $(addsuffix .o, $(FILTROS)) $(addsuffix _asm.o, $(FILTROS)) $(addsuffix _c.o, $(FILTROS))
 LIBS_OBJS   = libbmp.o imagenes.o utils.o
-MAIN_OBJS   = tp2.o cli.o
+MAIN_OBJS   = filtros.o cli.o
 MAIN_OBJS_CON_PATH = $(addprefix $(BUILD_DIR)/, $(MAIN_OBJS))
 
 OBJS = $(MAIN_OBJS) $(LIBS_OBJS) $(FILTROS_OBJ)

@@ -1,6 +1,6 @@
 
-#ifndef __TP2__H__
-#define __TP2__H__
+#ifndef __FILTROS__H__
+#define __FILTROS__H__
 
 #include <stdbool.h>
 
@@ -82,7 +82,7 @@ typedef struct filtro_t {
 
 #define DEFINIR_FILTRO(nombre, n) filtro_t nombre = {#nombre, leer_params_##nombre, ayuda_##nombre, aplicar_##nombre, liberar_##nombre, n};
 
-// ~~~ declaraciones de tp2 ~~~
+// ~~~ declaraciones de filtros ~~~
 filtro_t* detectar_filtro(configuracion_t *config);
 void      correr_filtro_imagen(configuracion_t *config, aplicador_fn_t aplicador);
 void      imprimir_tiempos_ejecucion(unsigned long long int start, unsigned long long int end, int cant_iteraciones);
@@ -91,6 +91,6 @@ void      imprimir_tiempos_ejecucion(unsigned long long int start, unsigned long
 void      procesar_opciones(int argc, char **argv, configuracion_t *config);
 void      imprimir_ayuda ( char *nombre_programa);
 
-#endif   /* !__TP2__H__ */
+#endif   /* !__FILTROS__H__ */
 
 

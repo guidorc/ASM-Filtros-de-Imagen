@@ -21,7 +21,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-#include "tp2.h"
+#include "filtros.h"
 
 void procesar_opciones(int argc, char **argv, configuracion_t *config) {
     // Si se ejecuta sin parametros ni opciones
